@@ -228,7 +228,7 @@ This creates three demo users and 50 financial records (see [Seeding the Databas
 
 | Variable | Description | Example |
 |---|---|---|
-| `MONGO_URI` | MongoDB connection string | `mongodb+srv://user:pass@cluster.mongodb.net/Zorvyn` |
+| `MONGO_URI` | MongoDB connection string 
 | `JWT_SECRET` | Secret key for signing JWTs | `my_super_secret_key_123` |
 | `JWT_EXPIRE` | Token expiration duration | `7d` |
 | `PORT` | Server port | `5000` |
