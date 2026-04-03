@@ -1,0 +1,105 @@
+/* === Users Page === */
+.users-page {
+  animation: fadeIn var(--transition-slow) ease-out;
+}
+
+.users-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.users-header h1 {
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+}
+
+/* User Card Grid (alternative to table on mobile) */
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-md);
+}
+
+/* Inline role/status selects */
+.inline-select {
+  padding: 4px 8px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  padding-right: 22px;
+}
+.inline-select:focus {
+  border-color: var(--accent-info);
+  outline: none;
+}
+
+/* User name cell */
+.user-name-cell {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.user-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+.user-avatar.admin { background: rgba(99, 102, 241, 0.2); color: var(--accent-info-light); }
+.user-avatar.analyst { background: rgba(16, 185, 129, 0.2); color: var(--accent-primary-light); }
+.user-avatar.viewer { background: rgba(245, 158, 11, 0.2); color: var(--accent-warning-light); }
+
+.user-name-info { min-width: 0; }
+.user-name-info .name {
+  font-weight: 500;
+  font-size: var(--fs-sm);
+}
+.user-name-info .email {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-date {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+/* Confirm Dialog */
+.confirm-dialog {
+  text-align: center;
+  padding: var(--space-lg);
+}
+.confirm-dialog p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+  line-height: 1.6;
+}
+.confirm-dialog-actions {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+}

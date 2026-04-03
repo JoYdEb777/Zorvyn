@@ -1,0 +1,81 @@
+/* === Records Page === */
+.records-page {
+  animation: fadeIn var(--transition-slow) ease-out;
+}
+
+.records-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.records-header h1 {
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+}
+
+/* Filters Bar */
+.filters-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-md);
+  backdrop-filter: var(--glass-blur);
+  animation: fadeInUp 300ms ease-out;
+}
+
+.filters-bar .form-input,
+.filters-bar .form-select {
+  width: auto;
+  min-width: 160px;
+  flex: 1;
+  padding: 8px 12px;
+  font-size: var(--fs-sm);
+  background: var(--bg-primary);
+}
+
+.filters-bar .btn {
+  flex-shrink: 0;
+}
+
+/* Amount Column */
+.amount-cell {
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+.amount-cell.income { color: var(--accent-primary-light); }
+.amount-cell.expense { color: var(--accent-danger-light); }
+
+/* Category Cell */
+.category-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+/* Actions Cell */
+.actions-cell {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+@media (max-width: 768px) {
+  .records-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .filters-bar {
+    flex-direction: column;
+  }
+  .filters-bar .form-input,
+  .filters-bar .form-select {
+    width: 100%;
+  }
+}
